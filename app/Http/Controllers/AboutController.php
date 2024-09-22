@@ -36,6 +36,7 @@ class AboutController extends Controller
             'subtitle'      =>'required',
             'title'         =>'required',
             'image'         =>'required',
+            'second_image'  =>'required',
             'description'   =>'required',
             'define'       =>'required',
         ];
@@ -45,9 +46,16 @@ class AboutController extends Controller
         if($request->hasFile('image')){
             $image = $request->file('image');
             $extension = $image->getClientOriginalExtension();
-            $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
+            $file_name = Str::random(5). rand(100000, 9999999). '.'.$extension;
             $image->move(public_path('uploads/about'), $file_name);
             $validatesData['image'] = $file_name;
+        }
+        if($request->hasFile('second_image')){
+            $image = $request->file('second_image');
+            $extension = $image->getClientOriginalExtension();
+            $file_name = Str::random(5). rand(100000, 9999999). '.'.$extension;
+            $image->move(public_path('uploads/about'), $file_name);
+            $validatesData['second_image'] = $file_name;
         }
 
         about::create($validatesData);
@@ -93,13 +101,20 @@ class AboutController extends Controller
         if($request->hasFile('image')){
             $image = $request->file('image');
             $extension = $image->getClientOriginalExtension();
-            $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
+            $file_name = Str::random(5). rand(100000, 9999999). '.'.$extension;
             $image->move(public_path('uploads/about'), $file_name);
-            $validatesData['image'] = $file_name; 
+            $validatesData['image'] = $file_name;
         }
-        
+        if($request->hasFile('second_image')){
+            $image = $request->file('second_image');
+            $extension = $image->getClientOriginalExtension();
+            $file_name = Str::random(5). rand(100000, 9999999). '.'.$extension;
+            $image->move(public_path('uploads/about'), $file_name);
+            $validatesData['second_image'] = $file_name;
+        }
+
         about::where('id', $id)->update($validatesData);
-        toast('Update Success','success');   
+        toast('Update Success','success');
         return redirect()->route('about.index');
     }
 

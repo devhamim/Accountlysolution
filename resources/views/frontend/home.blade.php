@@ -51,7 +51,7 @@
                     <!-- section title -->
                     <div class="section-title res-1024-padding_top40 clearfix">
                         <div class="title-header">
-                            <h3>{{ $abouts->first()->subtitle }}</h3>
+                            <h3>About Us</h3>
                             <h2 class="title">{{ $abouts->first()->title }}</h2>
                         </div>
                         <div class="title-desc padding_right35 res-991-padding_right0">
@@ -69,9 +69,9 @@
                                     <div class="ttm-fid-contents">
                                         <h4 class="ttm-fid-inner">
                                             <span data-appear-animation="animateDigits" data-from="0"
-                                                data-to="25" data-interval="5" data-before=""
+                                                data-to="{{ $abouts->first()->subtitle }}" data-interval="5" data-before=""
                                                 data-before-style="sub" data-after="+" data-after-style="sup"
-                                                class="numinate">25
+                                                class="numinate">{{ $abouts->first()->subtitle }}
                                             </span>
                                             <span>+</span>
                                         </h4>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-6">
                             <div class="ttm_single_image-wrapper res-575-margin_top30">
-                                <img class="img-fluid" src="{{ asset('frontend') }}/images/single-img-2.jpg" title="single-img-two"
+                                <img class="img-fluid" src="{{ asset('uploads/about') }}/{{ $abouts->first()->second_image }}" title="single-img-two"
                                     alt="single-img" width="334" height="258">
                             </div>
                         </div>
@@ -124,81 +124,26 @@
             </div><!-- row end -->
             <!--row -->
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="ttm-bgcolor-white featured-icon-box icon-align-top-content box-shadow style2">
-                        <div class="featured-icon">
-                            <div
-                                class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-style-round ttm-icon_element-size-md">
-                                <i class="flaticon flaticon-checklist"></i>
+                @foreach ($services->take(4) as $service)
+                    <div class="col-lg-3 col-md-6">
+                        <div class="ttm-bgcolor-white featured-icon-box icon-align-top-content box-shadow style2">
+                            <div class="featured-icon">
+                                <div
+                                    class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-style-round ttm-icon_element-size-md">
+                                    {!! $service->icon !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3><a href="financial-advise.html" tabindex="-1">Financial Planning</a></h3>
-                            </div>
-                            <div class="featured-desc">
-                                The process of estimating determining process of planning phase.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="ttm-bgcolor-white featured-icon-box icon-align-top-content box-shadow style2">
-                        <div class="featured-icon">
-                            <div
-                                class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-style-round ttm-icon_element-size-md">
-                                <i class="flaticon flaticon-money-1"></i>
-                            </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3><a href="accounting-service.html" tabindex="-1">Investment Solution</a>
-                                </h3>
-                            </div>
-                            <div class="featured-desc">
-                                We build a diversified and investment portfolio for all over our client.
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h3><a href="financial-advise.html" tabindex="-1">{{ $service->title }}</a></h3>
+                                </div>
+                                <div class="featured-desc">
+                                    {{ $service->sort_desp }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="ttm-bgcolor-white featured-icon-box icon-align-top-content box-shadow style2">
-                        <div class="featured-icon">
-                            <div
-                                class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-style-round ttm-icon_element-size-md">
-                                <i class="flaticon flaticon-calendar"></i>
-                            </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3><a href="conflict-management.html" tabindex="-1">Transaction Service</a>
-                                </h3>
-                            </div>
-                            <div class="featured-desc">
-                                Implications can significantly the values to the all transactions.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="ttm-bgcolor-white featured-icon-box icon-align-top-content box-shadow style2">
-                        <div class="featured-icon">
-                            <div
-                                class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-style-round ttm-icon_element-size-md">
-                                <i class="flaticon flaticon-bank"></i>
-                            </div>
-                        </div>
-                        <div class="featured-content">
-                            <div class="featured-title">
-                                <h3><a href="banking-consulting.html" tabindex="-1">Banking Consulting</a>
-                                </h3>
-                            </div>
-                            <div class="featured-desc">
-                                We send you newsletter with the up to date tax tips and more yours details.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div><!-- row end -->
             <!--row -->
             <div class="row">
@@ -649,7 +594,7 @@
                                     class="ttm-bgcolor-skincolor p-40 mr_30 margin_top30 res-991-margin_top0 res-991-margin_right0">
                                     <div class="ttm-play-icon-btn margin_top10">
                                         <div class="ttm-play-icon-animation">
-                                            <a href="https://youtu.be/7e90gBu4pas" target="_self"
+                                            <a href="{{ $videos->first()->link }}" target="_self"
                                                 class="ttm_prettyphoto">
                                                 <div
                                                     class="ttm-icon ttm-icon_element-fill  ttm-icon_element-color-white ttm-icon_element-size-sm ttm-icon_element-style-rounded">

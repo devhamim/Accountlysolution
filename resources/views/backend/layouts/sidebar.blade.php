@@ -38,12 +38,12 @@
                     {{-- <li class="sidebar-dropdown-item">
                         <a href="{{ route('achieve.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-calendar"></i></span> <span class="sidebar-txt">Achieve</span></a>
                     </li> --}}
-                    {{-- <li class="sidebar-dropdown-item">
+                    <li class="sidebar-dropdown-item">
                         <a href="{{ route('videos.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-solid fa-film"></i></span> <span class="sidebar-txt">Video</span></a>
-                    </li> --}}
-                    {{-- <li class="sidebar-dropdown-item">
+                    </li>
+                    <li class="sidebar-dropdown-item">
                         <a href="{{ route('service.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-solid fa-film"></i></span> <span class="sidebar-txt">Service</span></a>
-                    </li> --}}
+                    </li>
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('blog.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-solid fa-blog"></i></span> <span class="sidebar-txt">Blog</span></a>
                     </li>

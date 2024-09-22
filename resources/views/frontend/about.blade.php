@@ -26,14 +26,14 @@
 
 <!--site-main start-->
 <div class="site-main">
-
     <!-- aboutus-section -->
+    @if ( $abouts->first() != null)
     <section class="ttm-row aboutus-section ttm-bgcolor-white clearfix">
         <div class="container">
             <div class="row row-equal-height"><!-- row -->
                 <div class="col-lg-6 col-md-7 col-sm-12">
                     <div class="ttm_single_image-wrapper">
-                        <img class="img-fluid" src="{{ asset('frontend') }}/images/single-img-7.png" title="single-img-one"
+                        <img class="img-fluid" src="{{ asset('uploads/about') }}/{{ $abouts->first()->image }}" title="single-img-one"
                             alt="single-img">
                     </div>
                 </div>
@@ -45,15 +45,10 @@
                         <div class="section-title clearfix">
                             <div class="title-header">
                                 <h3>ABOUT INVESS</h3>
-                                <h2 class="title res-1024-br-none">Trust That You're Working
-                                    <br> The Best Accountants
-                                </h2>
+                                <h2 class="title res-1024-br-none">{{ $abouts->first()->title }}</h2>
                             </div>
                             <div class="title-desc padding_right40">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip. Duis aute irure
-                                    dolor in reprehenderit in voluptate velit esse cillum.
+                                <p>{!! $abouts->first()->description !!}
                                 </p>
                             </div>
                         </div><!-- section title end -->
@@ -67,9 +62,9 @@
                             class="ttm-fid inside ttm-fid-without-icon ttm-highlight-fid style2 ttm-bgcolor-white">
                             <div class="ttm-fid-contents">
                                 <h4 class="ttm-fid-inner">
-                                    <span data-appear-animation="animateDigits" data-from="0" data-to="25"
+                                    <span data-appear-animation="animateDigits" data-from="0" data-to="{{ $abouts->first()->subtitle }}"
                                         data-interval="1" data-before="" data-before-style="sub"
-                                        data-after="+" data-after-style="sup" class="numinate">25
+                                        data-after="+" data-after-style="sup" class="numinate">{{ $abouts->first()->subtitle }}
                                     </span>
                                     <span>+</span>
                                 </h4>
@@ -79,7 +74,7 @@
                                 <h3 class="ttm-fid-title">Of Our Work Experience</h3>
                             </div>
                             <div class="ttm_single_image-wrapper">
-                                <img class="img-center" src="{{ asset('frontend') }}/images/logo-img.png" title="single-img-one"
+                                <img class="img-center" src="{{ asset('uploads/setting') }}/{{ $settings->first()->logo }}" title="single-img-one"
                                     alt="single-img">
                             </div>
                         </div>
@@ -88,7 +83,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="ttm_single_image-wrapper res-575-margin_top30">
-                        <img class="img-fluid" src="{{ asset('frontend') }}/images/single-img-8.png" title="single-img-eight"
+                        <img class="img-fluid" src="{{ asset('uploads/about') }}/{{ $abouts->first()->second_image }}" title="single-img-eight"
                             alt="single-img">
                     </div>
                 </div>
@@ -109,7 +104,7 @@
             </div>
         </div>
     </section><!-- aboutus-section end -->
-
+    @endif
 
     <!-- services-section -->
     <section class="ttm-row services-section ttm-bgcolor-grey  clearfix">

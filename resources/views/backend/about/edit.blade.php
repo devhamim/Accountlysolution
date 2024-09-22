@@ -16,21 +16,28 @@
                 @method('PUT')
                 <input type="hidden" name="id" value="{{ $abouts->id }}">
                     <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label">Subtitle</label>
-                            <input type="text" name="subtitle" class="form-control form-control-sm" value="{{ $abouts->subtitle }}">
-                            
-                        </div>
+
                         <div class="col-12">
                             <label class="form-label">Title</label>
                             <input type="text" name="title" class="form-control form-control-sm" value="{{ $abouts->title }}">
-                            
                         </div>
-                            
+                        <div class="col-12">
+                            <label class="form-label">Experience</label>
+                            <input type="number" name="subtitle" class="form-control form-control-sm" value="{{ $abouts->subtitle }}">
+                        </div>
                         <div class="col-12">
                             <div class="upload-category-thumbnail">
                                 <label class="form-label" id="addCatThumb">Image</label>
                                 <input type="file" name="image" class="form-control" id="thumbUpload" value="{{ $abouts->image }}">
+                            </div>
+                            <div class="my-3">
+                                <img width="100" id="blah" src="{{ asset('uploads/about') }}/{{ $abouts->image }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="upload-category-thumbnail">
+                                <label class="form-label" id="addCatThumb">Second Image</label>
+                                <input type="file" name="second_image" class="form-control" id="thumbUpload" value="{{ $abouts->second_image }}">
                             </div>
                             <div class="my-3">
                                 <img width="100" id="blah" src="{{ asset('uploads/about') }}/{{ $abouts->image }}" alt="">
@@ -71,6 +78,6 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection

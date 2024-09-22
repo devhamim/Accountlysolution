@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('subtitle');
             $table->string('title');
             $table->string('image')->nullable();
+            $table->string('second_image')->nullable();
             $table->longText('description');
             $table->integer('define')->default(2);
             $table->integer('status')->default(1);

@@ -14,14 +14,14 @@
                 <form action="{{ route('service.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="row g-3">
-                        
+
                         <div class="col-12">
                             <label class="form-label">Title</label>
                             <input type="text" name="title" class="form-control form-control-sm @error('title') is-invalid @enderror" value="{{ old('title') }}">
                         </div>
                         <div class="col-sm-6">
                             <label class="form-label">Icon</label>
-                            <input type="file" name="icon" class="form-control form-control-sm @error('icon') is-invalid @enderror" value="{{ old('icon') }}">
+                            <input type="text" name="icon" class="form-control form-control-sm @error('icon') is-invalid @enderror" value="{{ old('icon') }}">
                         </div>
                         <div class="col-sm-6">
                             <label class="form-label">Image</label>
@@ -31,7 +31,7 @@
                             <label class="form-label">Sort Description</label>
                             <textarea name="sort_desp" class="form-control form-control-sm @error('sort_desp') is-invalid @enderror">{{ old('sort_desp') }}</textarea>
                         </div>
-                    
+
                         <div class="col-12 d-flex justify-content-end">
                             <div class="btn-box">
                                 <button type="submit" class="btn btn-sm btn-primary">Save</button>
@@ -58,7 +58,7 @@
                 <div class="table-filter-option">
                     <div class="row justify-content-between g-3">
                         <div class="col-xxl-4 col-6 col-xs-12">
-                            
+
                         </div>
                         <div class="col-xl-2 col-3 col-xs-12 d-flex justify-content-end">
                             <div id="productTableLength"></div>
@@ -84,9 +84,10 @@
                             <tr>
                                 <td>
                                     <div class="table-category-card">
-                                        <div class="part-icon">
+                                        {{-- <span>{{ $service->icon }}</span> --}}
+                                        {{-- <div class="part-icon">
                                             <span><img src="{{ asset('uploads/service') }}/{{ $service->icon }}" alt=""></span>
-                                        </div>
+                                        </div> --}}
                                         <div class="part-txt" >
                                             <span class="category-name">{{ $service->title }}</span>
                                         </div>

@@ -58,12 +58,14 @@ class FrontendController extends Controller
         $clients = client::where('status', 1)->get();
         $teams = team::where('status', 1)->get();
         $customerSays = customerSay::where('status', 1)->get();
+        $settings = setting::all();
         return view('frontend.about', [
             'abouts'=>$abouts,
             'products'=>$products,
             'clients'=>$clients,
             'teams'=>$teams,
             'customerSays'=>$customerSays,
+            'settings'=>$settings,
         ]);
     }
     //services

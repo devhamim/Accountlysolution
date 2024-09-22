@@ -16,21 +16,21 @@
                 @method('PUT')
                 <input type="hidden" name="id" value="{{ $services->id }}">
                     <div class="row g-3">
-                        
+
                         <div class="col-12">
                             <label class="form-label">Title</label>
                             <input type="text" name="title" class="form-control form-control-sm" value="{{ $services->title }}">
-                            
+
                         </div>
-                            
+
                         <div class="col-12">
                             <div class="upload-category-thumbnail">
                                 <label class="form-label" id="addCatThumb">Icon</label>
-                                <input type="file" name="icon" class="form-control" id="thumbUpload" value="{{ $services->icon }}">
+                                <input type="text" name="icon" class="form-control" id="thumbUpload" value="{{ $services->icon }}">
                             </div>
-                            <div class="my-3">
+                            {{-- <div class="my-3">
                                 <img width="100" id="blah" src="{{ asset('uploads/service') }}/{{ $services->icon }}" alt="">
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-12">
                             <div class="upload-category-thumbnail">
@@ -45,7 +45,7 @@
                             <label class="form-label">Sort Description</label>
                             <textarea name="sort_desp" class="form-control form-control-sm">{{ $services->sort_desp }}</textarea>
                         </div>
-                        
+
                         <div class="col-12">
                             <label class="form-label">Status</label>
                             <select name="status" class="form-control form-control-sm" id="">
@@ -63,6 +63,6 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection
