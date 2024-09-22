@@ -34,7 +34,7 @@
                             </span>
                         @enderror
                         </div>
-                        
+
 
                         <div class="col-sm-6">
                             <label class="form-label">Password</label>
@@ -97,11 +97,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($users as $user)
+                        @foreach ($users->skip(1) as $user)
                             <tr>
                                 <td>
                                     <div class="table-category-card">
-                                        
+
                                         <div class="part-txt" style="width: 120px">
                                             <span class="category-name">{{ $user->name }}</span>
                                         </div>
