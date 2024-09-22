@@ -40,7 +40,7 @@
                                 <input type="file" name="second_image" class="form-control" id="thumbUpload" value="{{ $abouts->second_image }}">
                             </div>
                             <div class="my-3">
-                                <img width="100" id="blah" src="{{ asset('uploads/about') }}/{{ $abouts->image }}" alt="">
+                                <img width="100" id="blah" src="{{ asset('uploads/about') }}/{{ $abouts->second_image }}" alt="">
                             </div>
                         </div>
                         <div class="col-12">
