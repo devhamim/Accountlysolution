@@ -71,12 +71,14 @@ class FrontendController extends Controller
     //services
     function services($slug){
         $services = service::where('slug', $slug)->where('status', 1)->first();
+        $all_services = service::where('status', 1)->get();
         $teams = team::where('status', 1)->get();
         $settings = setting::all();
         return view('frontend.services', [
             'services'=>$services,
             'teams'=>$teams,
             'settings'=>$settings,
+            'all_services'=>$all_services,
         ]);
     }
     //our_portfolio

@@ -31,6 +31,13 @@
             <!-- row -->
             <div class="row">
                 <div class="col-lg-4 widget-area sidebar-left">
+                    <aside class="widget widget-nav-menu">
+                        <ul>
+                            @foreach ($all_services as $all_serv)
+                                <li class="{{ request()->route('slug') == $all_serv->slug?'active':'' }}"><a href="{{ route('services', $all_serv->slug) }}">{{ $all_serv->title }}</a></li>
+                            @endforeach
+                        </ul>
+                    </aside>
                     <aside class="widget widget-download with-title">
                         <h3 class="widget-title">Download</h3>
                         <ul class="download">
