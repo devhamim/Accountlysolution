@@ -25,7 +25,7 @@
 
                         <div class="col-12">
                             <div class="upload-category-thumbnail">
-                                <label class="form-label" id="addCatThumb">Icon</label>
+                                <label class="form-label" id="addCatThumb">Icon (<a href="https://www.flaticon.com/icon-fonts-most-downloaded" target="_blank">Find</a>)</label>
                                 <input type="text" name="icon" class="form-control" id="thumbUpload" value="{{ $services->icon }}">
                             </div>
                             {{-- <div class="my-3">

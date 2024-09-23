@@ -20,7 +20,7 @@
                             <input type="text" name="title" class="form-control form-control-sm @error('title') is-invalid @enderror" value="{{ old('title') }}">
                         </div>
                         <div class="col-sm-6">
-                            <label class="form-label">Icon</label>
+                            <label class="form-label">Icon (<a href="https://www.flaticon.com/icon-fonts-most-downloaded" target="_blank">Find</a>)</label>
                             <input type="text" name="icon" class="form-control form-control-sm @error('icon') is-invalid @enderror" value="{{ old('icon') }}">
                         </div>
                         <div class="col-sm-6">
