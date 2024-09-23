@@ -50,9 +50,14 @@
                                 <ul class="menu">
                                     <li class="mega-menu-item"><a href="{{ url('/') }}">Home</a></li>
                                     <li class="mega-menu-item"><a href="{{ route('about_us') }}">About</a></li>
-                                    <li class="mega-menu-item"><a href="{{ route('services') }}">Service</a></li>
-                                    {{-- <li class="mega-menu-item"><a href="{{ route('our.product') }}">Product</a></li> --}}
-                                    {{-- <li class="mega-menu-item"><a href="{{ route('gallerys') }}">Gellary</a></li> --}}
+                                    {{-- <li class="mega-menu-item"><a href="{{ route('services') }}">Service</a></li> --}}
+                                    <li class="mega-menu-item"><a href="#" class="mega-menu-link">Services</a>
+                                        <ul class="mega-submenu">
+                                            @foreach ($services as $service)
+                                                <li><a href="{{ route('services', $service->slug) }}">{{ $service->title }}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
                                     <li class="mega-menu-item"><a href="{{ route('our.blog') }}">Blog</a></li>
                                     <li class="mega-menu-item"><a href="{{ route('contect') }}">Contect</a></li>
                                 </ul>

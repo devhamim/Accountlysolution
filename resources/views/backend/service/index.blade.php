@@ -31,7 +31,13 @@
                             <label class="form-label">Sort Description</label>
                             <textarea name="sort_desp" class="form-control form-control-sm @error('sort_desp') is-invalid @enderror">{{ old('sort_desp') }}</textarea>
                         </div>
-
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea rows="12" id="summernote" name="description" class="form-control form-control-sm @error('description') is-invalid @enderror">{{ old('description') }}</textarea>
+                            @error('description')
+                                <strong class="text-danger">{{ $message }}</strong>
+                            @enderror
+                        </div>
                         <div class="col-12 d-flex justify-content-end">
                             <div class="btn-box">
                                 <button type="submit" class="btn btn-sm btn-primary">Save</button>

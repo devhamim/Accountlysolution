@@ -284,7 +284,7 @@
                             <div class="ttm-box-view-overlay">
                                 <div class="featured-iconbox ttm-media-link">
                                     <div class="media-block">
-                                        <a href="team-details.html" class="media-btn" tabindex="0"><i class="ti ti-plus"></i></a>
+                                        <a class="media-btn" tabindex="0"><i class="ti ti-plus"></i></a>
                                         <ul class="social-icons list-inline">
                                             <li class="social-facebook"><a href="{{ $team->facebook }}" target="_blank" tabindex="0"><i class="ti ti-facebook"></i></a></li>
                                             <li class="social-linkedin"><a href="{{ $team->linkedin }}" target="_blank" tabindex="0"><i class="ti ti-linkedin"></i></a></li>

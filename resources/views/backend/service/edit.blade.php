@@ -45,7 +45,10 @@
                             <label class="form-label">Sort Description</label>
                             <textarea name="sort_desp" class="form-control form-control-sm">{{ $services->sort_desp }}</textarea>
                         </div>
-
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea rows="7" id="summernote" name="description" class="form-control form-control-sm">{!! $services->description !!}</textarea>
+                        </div>
                         <div class="col-12">
                             <label class="form-label">Status</label>
                             <select name="status" class="form-control form-control-sm" id="">

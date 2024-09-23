@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->longText('sort_desp')->nullable();
             $table->longText('description')->nullable();
+            $table->string('slug')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\feature;
 use App\Models\service;
 use Illuminate\Http\Request;
+use Nette\Utils\Random;
 use Str;
 
 class ServiceController extends Controller
@@ -40,9 +41,10 @@ class ServiceController extends Controller
             'icon'              =>'',
             'image'             =>'',
             'sort_desp'         =>'',
+            'description'         =>'',
         ];
 
-        $validatesData = $request->validate($rules); 
+        $validatesData = $request->validate($rules);
         // icon
         if($request->hasFile('icon')){
             $image = $request->file('icon');
@@ -59,6 +61,7 @@ class ServiceController extends Controller
             $image->move(public_path('uploads/service'), $file_name);
             $validatesData['image'] = $file_name;
         }
+        $validatesData['slug'] = Str::random(8). rand(100000, 99999);
 
         service::create($validatesData);
         toast('Add Success','success');
@@ -96,6 +99,7 @@ class ServiceController extends Controller
             'icon'              =>'',
             'image'             =>'',
             'sort_desp'         =>'',
+            'description'         =>'',
             'status'            =>'required',
         ];
 
@@ -107,20 +111,20 @@ class ServiceController extends Controller
             $extension = $image->getClientOriginalExtension();
             $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
             $image->move(public_path('uploads/service'), $file_name);
-            $validatesData['icon'] = $file_name; 
+            $validatesData['icon'] = $file_name;
         }
-        
+
         // image
         if($request->hasFile('image')){
             $image = $request->file('image');
             $extension = $image->getClientOriginalExtension();
             $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
             $image->move(public_path('uploads/service'), $file_name);
-            $validatesData['image'] = $file_name; 
+            $validatesData['image'] = $file_name;
         }
-        
+
         service::where('id', $id)->update($validatesData);
-        toast('Update Success','success');   
+        toast('Update Success','success');
         return redirect()->route('service.index');
     }
 

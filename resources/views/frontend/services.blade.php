@@ -82,16 +82,13 @@
                         <div class="ttm-service-description">
                             <div class="padding_bottom25">
                                 <div class="ttm_fatured_image-wrapper">
-                                    <img class="img-fluid" src="{{ asset('frontend') }}/images/services/services-02-1024x550.jpg"
+                                    <img class="img-fluid" src="{{ asset('uploads/service') }}/{{ $services->image }}"
                                         alt="services-1">
                                 </div>
                             </div>
-                            <h3>Business Analytics & Market Research</h3>
+                            <h3>{{ $services->title }}</h3>
                             <div class="padding_bottom5">
-                                <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam
-                                    eget dui. Etiam rhoncus. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                               {!! $services->description !!}
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
@@ -159,132 +156,57 @@
                                 <h3>Our Leadership Management Team</h3>
                             </div>
                             <div class="row">
-                                <div class="col-md-4 ttm-box-col-wrapper">
-                                    <!-- featured-imagebox-team -->
-                                    <div class="featured-imagebox featured-imagebox-team style1">
-                                        <div class="ttm-box-view-overlay">
-                                            <div class="featured-iconbox ttm-media-link">
-                                                <div class="media-block">
-                                                    <a href="team-detail.html" class="media-btn"><i
-                                                            class="ti ti-plus"></i></a>
-                                                    <ul class="social-icons list-inline">
-                                                        <li class="social-facebook"><a
-                                                                href="https://www.facebook.com/preyantechnosys19"
-                                                                target="_blank"><i
-                                                                    class="ti ti-facebook"></i></a></li>
-                                                        <li class="social-twitter"><a
-                                                                href="https://twitter.com/PreyanTechnosys"
-                                                                target="_blank"><i
-                                                                    class="ti ti-twitter-alt"></i></a></li>
-                                                        <li class="social-instagram"><a
-                                                                href="https://www.instagram.com/preyan_technosys/"
-                                                                target="_blank"><i
-                                                                    class="ti ti-instagram"></i></a></li>
-                                                    </ul>
+                                @foreach ($teams->take(3) as $team)
+                                    <div class="col-md-4 ttm-box-col-wrapper">
+                                        <!-- featured-imagebox-team -->
+                                        <div class="featured-imagebox featured-imagebox-team style1">
+                                            <div class="ttm-box-view-overlay">
+                                                <div class="featured-iconbox ttm-media-link">
+                                                    <div class="media-block">
+                                                        <a class="media-btn"><i
+                                                                class="ti ti-plus"></i></a>
+                                                        <ul class="social-icons list-inline">
+                                                            <li class="social-facebook">
+                                                                <a href="{{ $team->facebook }}" target="_blank">
+                                                                    <i class="ti ti-facebook"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="social-instagram">
+                                                                <a href="{{ $team->instagram }}" target="_blank">
+                                                                    <i class="ti ti-instagram"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="social-facebook">
+                                                                <a href="{{ $team->linkedin }}" target="_blank">
+                                                                    <i class="ti ti-linkedin"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="social-twitter">
+                                                                <a href="{{ $team->github }}" target="_blank">
+                                                                    <i class="ti ti-github"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-thumbnail">
+                                                    <img class="img-fluid" src="{{ asset('uploads/team') }}/{{ $team->image }}"
+                                                        alt="image">
                                                 </div>
                                             </div>
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid" src="{{ asset('frontend') }}/images/team/team-04.jpg"
-                                                    alt="image">
-                                            </div>
-                                        </div>
-                                        <div class="featured-content featured-content-team">
-                                            <div class="featured-title">
-                                                <h3><a href="team-detail.html">Andrew Bert</a></h3>
-                                            </div>
-                                            <div class="team-position">Accounts Manager</div>
-                                            <a href="team-detail.html"
-                                                class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 rajdhani">
-                                                <strong>View Profile<i
-                                                        class="flaticon flaticon-right-arrow"></i></strong>
-                                            </a>
-                                        </div>
-                                    </div><!-- featured-imagebox-team end-->
-                                </div>
-                                <div class="col-md-4 ttm-box-col-wrapper">
-                                    <!-- featured-imagebox-team -->
-                                    <div class="featured-imagebox featured-imagebox-team style1">
-                                        <div class="ttm-box-view-overlay">
-                                            <div class="featured-iconbox ttm-media-link">
-                                                <div class="media-block">
-                                                    <a href="team-detail.html" class="media-btn"><i
-                                                            class="ti ti-plus"></i></a>
-                                                    <ul class="social-icons list-inline">
-                                                        <li class="social-facebook"><a
-                                                                href="https://www.facebook.com/preyantechnosys19"
-                                                                target="_blank"><i
-                                                                    class="ti ti-facebook"></i></a></li>
-                                                        <li class="social-twitter"><a
-                                                                href="https://twitter.com/PreyanTechnosys"
-                                                                target="_blank"><i
-                                                                    class="ti ti-twitter-alt"></i></a></li>
-                                                        <li class="social-instagram"><a
-                                                                href="https://www.instagram.com/preyan_technosys/"
-                                                                target="_blank"><i
-                                                                    class="ti ti-instagram"></i></a></li>
-                                                    </ul>
+                                            <div class="featured-content featured-content-team">
+                                                <div class="featured-title">
+                                                    <h3><a>{{ $team->name }}</a></h3>
                                                 </div>
+                                                <div class="team-position">{{ $team->post }}</div>
+                                                {{-- <a href="team-detail.html"
+                                                    class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 rajdhani">
+
+                                                </a> --}}
                                             </div>
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid" src="{{ asset('frontend') }}/images/team/team-01.jpg"
-                                                    alt="image">
-                                            </div>
-                                        </div>
-                                        <div class="featured-content featured-content-team">
-                                            <div class="featured-title">
-                                                <h3><a href="team-detail.html">Michael Bean</a></h3>
-                                            </div>
-                                            <div class="team-position">Marketing Head</div>
-                                            <a href="team-detail.html"
-                                                class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 rajdhani">
-                                                <strong>View Profile<i
-                                                        class="flaticon flaticon-right-arrow"></i></strong>
-                                            </a>
-                                        </div>
-                                    </div><!-- featured-imagebox-team end-->
-                                </div>
-                                <div class="col-md-4 ttm-box-col-wrapper">
-                                    <!-- featured-imagebox-team -->
-                                    <div class="featured-imagebox featured-imagebox-team style1">
-                                        <div class="ttm-box-view-overlay">
-                                            <div class="featured-iconbox ttm-media-link">
-                                                <div class="media-block">
-                                                    <a href="team-detail.html" class="media-btn"><i
-                                                            class="ti ti-plus"></i></a>
-                                                    <ul class="social-icons list-inline">
-                                                        <li class="social-facebook"><a
-                                                                href="https://www.facebook.com/preyantechnosys19"
-                                                                target="_blank"><i
-                                                                    class="ti ti-facebook"></i></a></li>
-                                                        <li class="social-twitter"><a
-                                                                href="https://twitter.com/PreyanTechnosys"
-                                                                target="_blank"><i
-                                                                    class="ti ti-twitter-alt"></i></a></li>
-                                                        <li class="social-instagram"><a
-                                                                href="https://www.instagram.com/preyan_technosys/"
-                                                                target="_blank"><i
-                                                                    class="ti ti-instagram"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid" src="{{ asset('frontend') }}/images/team/team-02.jpg"
-                                                    alt="image">
-                                            </div>
-                                        </div>
-                                        <div class="featured-content featured-content-team">
-                                            <div class="featured-title">
-                                                <h3><a href="team-detail.html">John Martin</a></h3>
-                                            </div>
-                                            <div class="team-position">Finance Head</div>
-                                            <a href="team-detail.html"
-                                                class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 rajdhani">
-                                                <strong>View Profile<i
-                                                        class="flaticon flaticon-right-arrow"></i></strong>
-                                            </a>
-                                        </div>
-                                    </div><!-- featured-imagebox-team end-->
-                                </div>
+                                        </div><!-- featured-imagebox-team end-->
+                                    </div>
+                                @endforeach
                             </div>
                             <div class="row">
                                 <div class="col-md-6">

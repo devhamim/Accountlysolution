@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\service;
 use App\Models\setting;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +31,10 @@ class AppServiceProvider extends ServiceProvider
         // setting
         View::composer('frontend.layout.header', function ($view){
             $view->with('setting', setting::all());
+        });
+        // service
+        View::composer('frontend.layout.header', function ($view){
+            $view->with('services', service::all());
         });
         // setting
         View::composer('frontend.layout.app', function ($view){

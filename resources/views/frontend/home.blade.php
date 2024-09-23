@@ -135,7 +135,7 @@
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
-                                    <h3><a href="financial-advise.html" tabindex="-1">{{ $service->title }}</a></h3>
+                                    <h3><a href="{{ route('services', $service->slug) }}" tabindex="-1">{{ $service->title }}</a></h3>
                                 </div>
                                 <div class="featured-desc">
                                     {{ $service->sort_desp }}
@@ -152,7 +152,7 @@
                         class="rajdhani margin_top35 res-991-margin_bottom30 text-center font-weight-600 fs-18">
                         <span class="ttm-textcolor-darkgrey">Here are our best services and methods for
                             business</span>
-                        <a href="{{ route('services') }}"
+                        <a href="{{ route('services', $services->first()->slug) }}"
                             class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 padding_right10">
                             <strong>More Services<i class="flaticon flaticon-right-arrow"></i></strong></a>
                     </div>
@@ -681,7 +681,7 @@
                     <div
                         class="rajdhani margin_top35 res-991-margin_bottom50 text-center font-weight-600 fs-18">
                         <span class="ttm-textcolor-darkgrey">To Provide Exceptional Financial and</span>
-                        <a href="{{ route('services') }}"
+                        <a href="{{ route('services', $services->first()->slug) }}"
                             class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 padding_right10">
                             <strong>Professional Services <i
                                     class="flaticon flaticon-right-arrow"></i></strong></a>

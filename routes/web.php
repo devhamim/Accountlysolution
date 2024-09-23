@@ -43,7 +43,7 @@ use Illuminate\Support\Facades\Route;
 // frontend
 Route::get('/', [FrontendController::class, 'home']);
 Route::get('/about-us', [FrontendController::class, 'about_us'])->name('about_us');
-Route::get('/services', [FrontendController::class, 'services'])->name('services');
+Route::get('/services/{slug}', [FrontendController::class, 'services'])->name('services');
 Route::get('/our-portfolio', [FrontendController::class, 'our_portfolio'])->name('our.portfolio');
 Route::get('/our-blog', [FrontendController::class, 'our_blog'])->name('our.blog');
 Route::get('/our-blog/details/{slug}', [FrontendController::class, 'our_blog_details'])->name('our.blog.details');
