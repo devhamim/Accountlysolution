@@ -34,7 +34,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
-                            <th>Subject</th>
+                            <th>Company</th>
                             <th>Message</th>
                             <th>Action</th>
                         </tr>

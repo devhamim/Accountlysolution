@@ -58,6 +58,7 @@ class FrontendController extends Controller
         $clients = client::where('status', 1)->get();
         $teams = team::where('status', 1)->get();
         $customerSays = customerSay::where('status', 1)->get();
+        $videos = video::where('status', 1)->get();
         $settings = setting::all();
         return view('frontend.about', [
             'abouts'=>$abouts,
@@ -66,6 +67,7 @@ class FrontendController extends Controller
             'teams'=>$teams,
             'customerSays'=>$customerSays,
             'settings'=>$settings,
+            'videos'=>$videos,
         ]);
     }
     //services

@@ -30,7 +30,7 @@
                         <div class="featured-title">
                             <h3>Call Us On</h3>
                             @if ($setting->first()->number != null)
-                                <p>{{ $setting->first()->number }}</p>
+                                <p>+88{{ $setting->first()->number }}</p>
                             @endif
                         </div>
                         <div class="featured-icon">
@@ -93,7 +93,7 @@
                         <ul class="menu-footer-quick-links">
                             <li><a href="{{ url('/') }}">Home</a></li>
                             <li><a href="{{ route('our.blog') }}">About</a></li>
-                            <li><a href="{{ route('our.product') }}">Product</a></li>
+                            <li><a href="{{ route('services', $services->first()->slug) }}">Service</a></li>
 
                         </ul>
                     </div>
@@ -102,9 +102,9 @@
                     <div class="widget widget_nav_menu res-991-margin_top30 clearfix">
                         <h3 class="widget-title">Useful Links</h3>
                         <ul class="menu-footer-quick-service-links">
-                            <li><a href="{{ route('gallerys') }}">Gellary</a></li>
                             <li><a href="{{ route('our.blog') }}">Blog</a></li>
                             <li><a href="{{ route('our.privacy.policy') }}">Privacy Policy</a></li>
+                            <li><a href="{{ route('our.privacy.policy') }}">Terms and Conditions</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,19 +112,17 @@
                     <div class="widget widget-recent-post res-991-margin_top30 clearfix">
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul class="widget-post ttm-recent-post-list">
-
+                        @foreach ($blogs->take(2) as $blog)
                             <li>
-                                <a href="blog-single.html"><img class="img-fluid"
-                                        src="images/blog/post-001-150x150.jpg" alt="post-img"></a>
+                                <a href="{{ route('our.blog.details', $blog->slug) }}"><img class="img-fluid"
+                                        src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt="post-img"></a>
                                 <div class="post-detail">
-                                    <span class="post-date"><i class="fa fa-calendar"></i>25 March,
-                                        2021</span>
-                                    <a href="blog-single.html">If the white whale be raised it must be in a
-                                        month.</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>{{ $blog->created_at->format('d,M,Y') }}</span>
+                                    <a href="{{ route('our.blog.details', $blog->slug) }}">{{ $blog->title }}</a>
 
                                 </div>
                             </li>
-
+                            @endforeach
                         </ul>
                     </div>
                 </div>

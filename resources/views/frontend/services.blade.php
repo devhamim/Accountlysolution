@@ -42,10 +42,10 @@
                         <h3 class="widget-title">Download</h3>
                         <ul class="download">
                             <li><i class="fa fa-file-pdf-o"></i>
-                                <a href="#"> Download .zip (5.2mb)</a>
+                                <a href="#"> Download .zip</a>
                             </li>
                             <li><i class="fa fa-file-text-o"></i>
-                                <a href="#"> Download .txt (6.8kb)</a>
+                                <a href="#"> Download .txt</a>
                             </li>
                         </ul>
                     </aside>

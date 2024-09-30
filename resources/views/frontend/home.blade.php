@@ -21,9 +21,9 @@
                                 <p data-animation="fadeInRight" data-delay="1s">{{ $banner->description }}</p>
                                 <div class="d-inline-block margin_top30 res-575-margin_top0"
                                     data-animation="fadeInUp" data-delay="1.4s">
-                                    <a class="ttm-btn ttm-btn-size-md  ttm-btn-shape-rounded ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor"
+                                    {{-- <a class="ttm-btn ttm-btn-size-md  ttm-btn-shape-rounded ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor"
                                         href="{{ route('about_us') }}">Discover More<i
-                                            class="flaticon flaticon-right-arrow"></i></a>
+                                            class="flaticon flaticon-right-arrow"></i></a> --}}
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="featured-content">
                                         <div class="featured-title">
-                                            <h2>79%</h2>
+                                            <h2>93%</h2>
                                             <span>Success Rate</span>
                                         </div>
                                     </div>
@@ -116,8 +116,8 @@
                     <!-- section title -->
                     <div class="section-title title-style-center_text">
                         <div class="title-header">
-                            <h3>WHAT WE DO</h3>
-                            <h2 class="title">Where Dreams Get Wings!</h2>
+                            <h3>OUR TOP SELLING</h3>
+                            <h2 class="title">TOP BEST SELLING SERVICES</h2>
                         </div>
                     </div><!-- section title end -->
                 </div>
@@ -260,172 +260,6 @@
         </div>
     </section>
 
-    <section class="ttm-row padding_zero-section clearfix">
-        <div class="container">
-            <!--row -->
-            <div class="row">
-                <div class="col-md-8 col-sm-8 col-12 mx-auto">
-                    <div
-                        class="text-center ttm-bg ttm-bgcolor-grey padding_top140 res-991-padding_top60 padding_bottom15 ">
-                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
-                        <div class="layer-content">
-                            <div class="section-title title-style-center_text">
-                                <div class="title-header">
-                                    <h3>NEWS Articles</h3>
-                                    <h2 class="title">Our Featured Cases</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- row end -->
-
-            <!-- row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ttm-bgcolor-white box-shadow position-relative p-30">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="row slick_slider"
-                                    data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "autoplay":false, "dots":false, "infinite":true, "responsive":[{"breakpoint":1199,"settings": {"slidesToShow": 3}}, {"breakpoint":992,"settings":{"slidesToShow": 2}},{"breakpoint":620,"settings":{"slidesToShow": 1}}]}'>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="featured-imagebox featured-imagebox-portfolio style1">
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend') }}/images/portfolio/project-01-700x600.jpg"
-                                                    alt="portfolio_img">
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3><a href="Single-Case-Studies.html">Startup Funding</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="category">
-                                                    <span>Finance, Growth</span>
-                                                </div>
-                                                <div class="featured-iconbox">
-                                                    <a href="Single-Case-Studies.html"
-                                                        class="ttm-icon ttm-icon_element-border ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-sm"><i
-                                                            class="flaticon flaticon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="featured-imagebox featured-imagebox-portfolio style1">
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend') }}/images/portfolio/project-02-700x600.jpg"
-                                                    alt="portfolio_img">
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3><a href="Single-Case-Studies.html">Bitcoin Farming</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="category">
-                                                    <span>Business, Finance</span>
-                                                </div>
-                                                <div class="featured-iconbox">
-                                                    <a href="Single-Case-Studies.html"
-                                                        class="ttm-icon ttm-icon_element-border ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-sm"><i
-                                                            class="flaticon flaticon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="featured-imagebox featured-imagebox-portfolio style1">
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend') }}/images/portfolio/project-03-700x600.jpg"
-                                                    alt="portfolio_img">
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3><a href="Single-Case-Studies.html">Business Tie-Ups</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="category">
-                                                    <span>Banking, Strategy</span>
-                                                </div>
-                                                <div class="featured-iconbox">
-                                                    <a href="Single-Case-Studies.html"
-                                                        class="ttm-icon ttm-icon_element-border ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-sm"><i
-                                                            class="flaticon flaticon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="featured-imagebox featured-imagebox-portfolio style1">
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend') }}/images/portfolio/project-04-700x600.jpg"
-                                                    alt="portfolio_img">
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3><a href="Single-Case-Studies.html">Personal Banking</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="category">
-                                                    <span>Banking, Finance</span>
-                                                </div>
-                                                <div class="featured-iconbox">
-                                                    <a href="Single-Case-Studies.html"
-                                                        class="ttm-icon ttm-icon_element-border ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-sm"><i
-                                                            class="flaticon flaticon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="featured-imagebox featured-imagebox-portfolio  style1">
-                                            <div class="featured-thumbnail">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend') }}/images/portfolio/project-05-700x600.jpg"
-                                                    alt="portfolio_img">
-                                            </div>
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h3><a href="Single-Case-Studies.html">Merger &
-                                                            Acquisition</a></h3>
-                                                </div>
-                                                <div class="category">
-                                                    <span>Growth, Strategy</span>
-                                                </div>
-                                                <div class="featured-iconbox">
-                                                    <a href="Single-Case-Studies.html"
-                                                        class="ttm-icon ttm-icon_element-border ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-sm"><i
-                                                            class="flaticon flaticon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- row end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- row end-->
-            <!--row -->
-            <div class="row">
-                <div class="col-md-8 col-sm-8 col-12 mx-auto">
-                    <div
-                        class="text-center ttm-bg ttm-bgcolor-grey padding_bottom145 res-991-padding_bottom115 padding_top50">
-                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
-                        <div class="layer-content">
-                            <a class="ttm-btn ttm-btn-size-md  ttm-btn-shape-rounded ttm-btn-style-fill ttm-icon-btn-right ttm-btn-color-skincolor"
-                                href="case-studies-1.html">More Case Study<i
-                                    class="flaticon flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- row end -->
-        </div>
-    </section>
-
     <section class="ttm-row padding_zero-section ttm-bgcolor-grey position-relative clearfix">
         <div class="container">
             <div class="row no-gutters"><!-- row -->
@@ -495,145 +329,6 @@
         </div>
     </section>
 
-    <!-- skill-section -->
-    <section class="ttm-row skill-section ttm-bgcolor-grey clearfix">
-        <div class="container">
-            <div class="row"><!-- row -->
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <!-- section title -->
-                    <div class="section-title clearfix">
-                        <div class="title-header">
-                            <h3>OUR SKILLS</h3>
-                            <h2 class="title">Professional Main Services</h2>
-                        </div>
-                        <div class="title-desc padding_right35">
-                            <p>We provide an extensive range of professional services and a high degree of
-                                specialization. See our exceptional service.
-                            </p>
-                            <div class="border-bottom margin_bottom10  margin_top25"></div>
-                        </div>
-                    </div><!-- section title end -->
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 res-767-mt-20">
-                            <!-- featured-iconbox -->
-                            <div class="featured-icon-box icon-align-before-title text-left style5">
-                                <div class="featured-icon">
-                                    <div
-                                        class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
-                                        <i class="flaticon flaticon-presentation"></i>
-                                    </div>
-                                </div>
-                                <div class="featured-title">
-                                    <h3>Financial Services</h3>
-                                    <span>25+ years experience</span>
-                                </div>
-                                <div class="featured-content">
-                                    <div class="featured-desc">
-                                        <p>Consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                                        <a href="#"
-                                            class="ttm-btn btn-inline ttm-btn-color-dark ttm-icon-btn-right padding_right10 fs-18 rajdhani">
-                                            <strong>View More<i
-                                                    class="flaticon flaticon-right-arrow"></i></strong>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div><!-- featured-iconbox end-->
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 res-767-mt-20">
-                            <!-- featured-iconbox -->
-                            <div class="featured-icon-box icon-align-before-title text-left style5">
-                                <div class="featured-icon">
-                                    <div
-                                        class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
-                                        <i class="flaticon flaticon-money-bag"></i>
-                                    </div>
-                                </div>
-                                <div class="featured-title">
-                                    <h3>Investment Tips</h3>
-                                    <span>Estimating the capital</span>
-                                </div>
-                                <div class="featured-content">
-                                    <div class="featured-desc">
-                                        <p>We build a diversified and investment portfolio for over our client.
-                                        </p>
-                                        <a href="#"
-                                            class="ttm-btn btn-inline ttm-btn-color-dark ttm-icon-btn-right padding_right10 fs-18 rajdhani">
-                                            <strong>View More<i
-                                                    class="flaticon flaticon-right-arrow"></i></strong>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div><!-- featured-iconbox end-->
-                        </div>
-                    </div>
-                    <div class="padding_top30">
-                        <!-- ttm-progress-bar -->
-                        <div class="ttm-progress-bar style1" data-percent="85%">
-                            <div class="progressbar-title">Investment Plan</div>
-                            <div class="progress-bar-inner">
-                                <div class="progress-bar progress-bar-color-bar_skincolor"
-                                    style="width: 85%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" data-percentage="85">85%</div>
-                        </div><!-- ttm-progress-bar end -->
-                        <!-- ttm-progress-bar -->
-                        <div class="ttm-progress-bar style1 res-991-padding_bottom30" data-percent="80%">
-                            <div class="progressbar-title">Consulting Experience</div>
-                            <div class="progress-bar-inner">
-                                <div class="progress-bar progress-bar-color-bar_skincolor"
-                                    style="width: 80%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" data-percentage="80">80%</div>
-                        </div><!-- ttm-progress-bar end -->
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="col-bg-img-five ttm-col-bgimage-yes ttm-bg break-991-colum">
-                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
-                        <div class="layer-content">
-                            <div class="d-flex align-items-center">
-                                <div
-                                    class="ttm-bgcolor-skincolor p-40 mr_30 margin_top30 res-991-margin_top0 res-991-margin_right0">
-                                    <div class="ttm-play-icon-btn margin_top10">
-                                        <div class="ttm-play-icon-animation">
-                                            <a href="{{ $videos->first()->link }}" target="_self"
-                                                class="ttm_prettyphoto">
-                                                <div
-                                                    class="ttm-icon ttm-icon_element-fill  ttm-icon_element-color-white ttm-icon_element-size-sm ttm-icon_element-style-rounded">
-                                                    <i class="fa fa-play ttm-textcolor-white"></i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image-overlay-content">
-                                <div class="ttm-bottom-view-overlay d-flex">
-                                    <span class="ttm-textcolor-white font-weight-500">
-                                        <strong class="font-weight-600 highlight-line position-relative">99.9%
-                                            Customer satisfaction</strong>
-                                        based on
-                                        <strong class="ttm-textcolor-skincolor font-weight-600">600+</strong>
-                                        <strong class="font-weight-600">Reviews</strong> and
-                                        <strong class="ttm-textcolor-skincolor font-weight-600">14,530</strong>
-                                        <strong class="font-weight-600">Objective</strong> Resource
-                                        <span class="text-left ttm-textcolor-skincolor fs-15 margin_left10">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- skill-section end -->
-
     <!-- article-section -->
     <section class="ttm-row article-section bg-img2 ttm-bg ttm-bgimage-yes padding_bottom150 clearfix">
         <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
@@ -677,23 +372,6 @@
                     </div>
                 @endforeach
             </div>
-            <!--row -->
-            <div class="row">
-                <div class=" col-lg-7 col-md-10 col-sm-12 m-auto">
-                    <div
-                        class="rajdhani margin_top35 res-991-margin_bottom50 text-center font-weight-600 fs-18">
-                        <span class="ttm-textcolor-darkgrey">To Provide Exceptional Financial and</span>
-                        @if ($services->first() != null)
-                            <a href="{{ route('services', $services->first()->slug) }}"
-                                class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 padding_right10">
-                                <strong>Professional Services
-                                    <i class="flaticon flaticon-right-arrow"></i>
-                                </strong>
-                            </a>
-                        @endif
-                    </div>
-                </div>
-            </div><!-- row end -->
         </div>
     </section><!-- article-section end -->
 
@@ -744,6 +422,48 @@
                             href="our-team.html">Meet Our Team<i
                                 class="flaticon flaticon-right-arrow margin_top5"></i></a>
                     </div> --}}
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-12">
+                    <form method="POST" action="{{ route('customerMessage.store') }}" class="request_qoute_form wrap-form clearfix">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="text-input">
+                                    <input name="name" type="text" value="{{ old('name') }}" placeholder="Your Name*" required="required">
+                                </span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="text-input">
+                                    <input name="subject" type="text" value="{{ old('subject') }}" placeholder="Company Name*" required="required">
+                                </span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="text-input">
+                                    <input name="phone" type="text" value="{{ old('phone') }}" placeholder="Phone Number*" required="required">
+                                </span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="text-input">
+                                    <input name="email" type="email" value="{{ old('email') }}" placeholder="Your Email*" required="required">
+                                </span>
+                            </div>
+                            <div class="col-lg-12">
+                                <span class="text-input">
+                                    <textarea name="message" rows="4" placeholder="Message" required="required">{{ old('message') }}</textarea>
+                                </span>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="padding_top15 text-center">
+                                    <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor bg-dark"
+                                        type="submit">Send Message
+                                        <i class="flaticon flaticon-right-arrow"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

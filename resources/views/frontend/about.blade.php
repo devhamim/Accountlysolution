@@ -311,21 +311,145 @@
                     </div>
                 @endforeach
             </div>
-
-            <div class="row">
-                <div class=" col-lg-7 col-md-10 col-sm-12 m-auto">
-                    <div
-                        class="rajdhani margin_top35 res-991-margin_bottom30 text-center font-weight-600 fs-18">
-                        <span class="ttm-textcolor-darkgrey">Sed do eiusmod tempor incididunt ut labore et
-                            dolor </span>
-                        <a href="{{ route('services') }}"
-                            class="ttm-btn btn-inline ttm-btn-color-skincolor ttm-icon-btn-right fs-18 padding_right10">
-                            <strong>More Services<i class="flaticon flaticon-right-arrow"></i></strong></a>
+        </div>
+    </section><!-- team-section end -->
+        <!-- skill-section -->
+    <section class="ttm-row skill-section ttm-bgcolor-grey clearfix">
+        <div class="container">
+            <div class="row"><!-- row -->
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <!-- section title -->
+                    <div class="section-title clearfix">
+                        <div class="title-header">
+                            <h3>OUR SKILLS</h3>
+                            <h2 class="title">Professional Main Services</h2>
+                        </div>
+                        <div class="title-desc padding_right35">
+                            <p>We provide an extensive range of professional services and a high degree of
+                                specialization. See our exceptional service.
+                            </p>
+                            <div class="border-bottom margin_bottom10  margin_top25"></div>
+                        </div>
+                    </div><!-- section title end -->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 res-767-mt-20">
+                            <!-- featured-iconbox -->
+                            <div class="featured-icon-box icon-align-before-title text-left style5">
+                                <div class="featured-icon">
+                                    <div
+                                        class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-presentation"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-title">
+                                    <h3>Financial Services</h3>
+                                    <span>25+ years experience</span>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-desc">
+                                        <p>Consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                                        <a href="#"
+                                            class="ttm-btn btn-inline ttm-btn-color-dark ttm-icon-btn-right padding_right10 fs-18 rajdhani">
+                                            <strong>View More<i
+                                                    class="flaticon flaticon-right-arrow"></i></strong>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-iconbox end-->
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 res-767-mt-20">
+                            <!-- featured-iconbox -->
+                            <div class="featured-icon-box icon-align-before-title text-left style5">
+                                <div class="featured-icon">
+                                    <div
+                                        class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-money-bag"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-title">
+                                    <h3>Investment Tips</h3>
+                                    <span>Estimating the capital</span>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-desc">
+                                        <p>We build a diversified and investment portfolio for over our client.
+                                        </p>
+                                        <a href="#"
+                                            class="ttm-btn btn-inline ttm-btn-color-dark ttm-icon-btn-right padding_right10 fs-18 rajdhani">
+                                            <strong>View More<i
+                                                    class="flaticon flaticon-right-arrow"></i></strong>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-iconbox end-->
+                        </div>
+                    </div>
+                    <div class="padding_top30">
+                        <!-- ttm-progress-bar -->
+                        <div class="ttm-progress-bar style1" data-percent="85%">
+                            <div class="progressbar-title">Investment Plan</div>
+                            <div class="progress-bar-inner">
+                                <div class="progress-bar progress-bar-color-bar_skincolor"
+                                    style="width: 85%;"></div>
+                            </div>
+                            <div class="progress-bar-percent" data-percentage="85">85%</div>
+                        </div><!-- ttm-progress-bar end -->
+                        <!-- ttm-progress-bar -->
+                        <div class="ttm-progress-bar style1 res-991-padding_bottom30" data-percent="80%">
+                            <div class="progressbar-title">Consulting Experience</div>
+                            <div class="progress-bar-inner">
+                                <div class="progress-bar progress-bar-color-bar_skincolor"
+                                    style="width: 80%;"></div>
+                            </div>
+                            <div class="progress-bar-percent" data-percentage="80">80%</div>
+                        </div><!-- ttm-progress-bar end -->
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-bg-img-five ttm-col-bgimage-yes ttm-bg break-991-colum">
+                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                        <div class="layer-content">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="ttm-bgcolor-skincolor p-40 mr_30 margin_top30 res-991-margin_top0 res-991-margin_right0">
+                                    <div class="ttm-play-icon-btn margin_top10">
+                                        <div class="ttm-play-icon-animation">
+                                            <a href="{{ $videos->first()->link }}" target="_self"
+                                                class="ttm_prettyphoto">
+                                                <div
+                                                    class="ttm-icon ttm-icon_element-fill  ttm-icon_element-color-white ttm-icon_element-size-sm ttm-icon_element-style-rounded">
+                                                    <i class="fa fa-play ttm-textcolor-white"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-overlay-content">
+                                <div class="ttm-bottom-view-overlay d-flex">
+                                    <span class="ttm-textcolor-white font-weight-500">
+                                        <strong class="font-weight-600 highlight-line position-relative">99.9%
+                                            Customer satisfaction</strong>
+                                        based on
+                                        <strong class="ttm-textcolor-skincolor font-weight-600">600+</strong>
+                                        <strong class="font-weight-600">Reviews</strong> and
+                                        <strong class="ttm-textcolor-skincolor font-weight-600">14,530</strong>
+                                        <strong class="font-weight-600">Objective</strong> Resource
+                                        <span class="text-left ttm-textcolor-skincolor fs-15 margin_left10">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </section><!-- team-section end -->
+    </section><!-- skill-section end -->
 </div>
 @endsection

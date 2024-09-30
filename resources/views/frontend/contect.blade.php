@@ -31,8 +31,7 @@
             <!-- row -->
             <div class="row row-equal-height">
                 <div class="col-xl-6">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.242931146893!2d-0.08187978422864274!3d51.54544427964142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c903640c869%3A0xe9bd89dfec683ad1!2sTottenham%20Rd%2C%20London%2C%20UK!5e0!3m2!1sen!2sin!4v1616562073091!5m2!1sen!2sin"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7301.612106753477!2d90.4004910546049!3d23.789919787258498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7f0fb95ecb7%3A0x16414d97d96d7b32!2sAccountly%20Solutions!5e0!3m2!1sbn!2sbd!4v1727719288182!5m2!1sbn!2sbd"></iframe>
                 </div>
                 <div class="col-xl-6">
                     <div class="padding_left30 res-1199-padding_left0 padding_top20 res-1199-padding_top40">
@@ -113,11 +112,29 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
-                                <p class="padding_top30 rajdhani fs-18 padding_right30">Follow us on <a
-                                        href="{{ $setting->first()->facebook }}"><strong>Facebook,</strong></a> Follow us on <a
-                                        href="{{ $setting->first()->twitter }}"><strong>Twitter,</strong></a> Follow us on <a
-                                        href="{{ $setting->first()->linkedin }}"><strong>Linkedin</strong></a> and also Follow us on <a
-                                        href="{{ $setting->first()->instagram }}"><strong>Instagram</strong></a></p>
+                                
+                                <p class="padding_top30 rajdhani ppp fs-18 padding_right30">Follow us on 
+                                    <a href="{{ $setting->first()->facebook }}">
+                                        <strong>
+                                          <i class="fa fa-facebook"></i>
+                                        </strong>
+                                    </a> 
+                                    <a href="{{ $setting->first()->twitter }}">
+                                        <strong>
+                                            <i class="fa fa-twitter"></i>
+                                        </strong>
+                                    </a> 
+                                    <a href="{{ $setting->first()->linkedin }}">
+                                        <strong>
+                                            <i class="fa fa-linkedin"></i>
+                                        </strong>
+                                    </a> 
+                                    <a href="{{ $setting->first()->instagram }}">
+                                        <strong>
+                                            <i class="fa fa-instagram"></i>
+                                        </strong>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +173,7 @@
                             </div>
                             <div class="col-md-6">
                                 <span class="text-input">
-                                    <input name="subject" type="text" value="{{ old('subject') }}" placeholder="Your Subject*" required="required">
+                                    <input name="subject" type="text" value="{{ old('subject') }}" placeholder="Company Name*" required="required">
                                 </span>
                             </div>
                             <div class="col-md-6">

@@ -59,7 +59,7 @@
                                         </ul>
                                     </li>
                                     <li class="mega-menu-item"><a href="{{ route('our.blog') }}">Blog</a></li>
-                                    <li class="mega-menu-item"><a href="{{ route('contect') }}">Contect</a></li>
+                                    <li class="mega-menu-item"><a href="{{ route('contect') }}">Contact</a></li>
                                 </ul>
                             </nav>
                             <div
@@ -78,7 +78,7 @@
                                 </div> --}}
                                 <div class="header_btn ttm-textcolor-skincolor">
                                     <a class="ttm-btn btn-inline ttm-btn-color-skincolor"
-                                        href="{{ route('contect') }}">Get A Quote</a>
+                                        href="{{ route('contect') }}">Get a Contingency Today</a>
                                 </div>
                             </div>
 
